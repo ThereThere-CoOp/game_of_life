@@ -1,9 +1,18 @@
-[gd_scene format=3 uid="uid://ds7k7hvoppog3"]
+[gd_scene load_steps=3 format=3 uid="uid://ds7k7hvoppog3"]
+
+[ext_resource type="Script" path="res://environment.gd" id="1_mijd7"]
+[ext_resource type="Texture2D" uid="uid://d86mdimbshfw" path="res://cell.png" id="2_kql70"]
 
 [node name="Environment" type="Node2D"]
+script = ExtResource("1_mijd7")
 
 [node name="Cell" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_kql70")
 
 [node name="GenerationTimer" type="Timer" parent="."]
+autostart = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="timeout" from="GenerationTimer" to="." method="_on_Timer_timeout"]
