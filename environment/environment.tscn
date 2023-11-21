@@ -1,14 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://ds7k7hvoppog3"]
 
-[ext_resource type="Script" path="res://environment.gd" id="1_mijd7"]
-[ext_resource type="Texture2D" uid="uid://d86mdimbshfw" path="res://cell.png" id="2_kql70"]
+[ext_resource type="Script" path="res://scripts/environment/environment.gd" id="1_4646b"]
+[ext_resource type="Texture2D" uid="uid://d86mdimbshfw" path="res://assets/environment/cell.png" id="2_nhvd1"]
 
 [node name="Environment" type="Node2D"]
-script = ExtResource("1_mijd7")
+script = ExtResource("1_4646b")
 
 [node name="Cell" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("2_kql70")
+texture = ExtResource("2_nhvd1")
 
 [node name="GenerationTimer" type="Timer" parent="."]
 autostart = true
